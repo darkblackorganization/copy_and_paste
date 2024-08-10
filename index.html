@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bittu</title>
+    <style>
+        * {
+            text-align: center;
+        }
+        h3 {
+            text-align: center;
+            background-color: blue;
+        }
+        input {
+            background-color: aqua;
+            text-align: center;
+        }
+        h1{
+            background-color: chartreuse;
+        }
+        #l{
+            background-color: cyan;
+        }
+       img {
+         width: 450px;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">hello! everyone</h1>
+        <h1  style="text-align: center;">Don't make the mistake of copying or pasting this red text</h1>
+        <h3   style="color: red;" id="copy">please copy me</h3>
+    </header>
+    <main>
+        <input style="width: 400px;"  type="text" placeholder="Please paste here and check that your copy text is the same" required>
+       <h1 id="l">thank you</h1>
+
+       <h1>this is script </h1>
+    <img src="code.png" alt="code">
+    </main>
+    <script>
+        document.addEventListener('copy', function(e){
+            console.log(e);
+            e.clipboardData.setData('text/plain', 'text is change\r\n')
+            e.preventDefault();
+        });
+
+        </script>
+       
+</body>
+</html>
